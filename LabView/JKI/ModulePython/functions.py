@@ -61,7 +61,7 @@ def get_shapes(img, img_contour, color):
             
             else:
                 cv.putText(img_contour, "Nierozpoznany", (x, y), cv.FONT_HERSHEY_COMPLEX, 0.7, (0,0,255), 2)
-def color_space(img, lower, upper):
+def color_space(frame, lower, upper):
     hsv_frame = cv.cvtColor(frame, cv.COLOR_BGR2HSV)
     img_contour = frame.copy()
 

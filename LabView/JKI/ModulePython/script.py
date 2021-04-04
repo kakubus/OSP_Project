@@ -1,5 +1,6 @@
 import cv2
 import numpy as np
+from functions import *
 
 def decode_img(img):
     img_rgb = np.array(img, dtype=np.uint8).transpose(1, 2, 0)
@@ -12,8 +13,18 @@ def encode_img(img):
     return img_encoded
 
 def process_image(raw_img):
-    img = decode_img(raw_img)
-    img = cv2.rectangle(img, (250, 100), (950, 800), (255, 255, 0), 2)
-    # cv2.imwrite('test.jpg', img)
-    res = encode_img(img)
+    frame = decode_img(raw_img)
+
+    img_contour = frame.copy()
+
+    img = color_space(frame, red_yellow_lower, red_yellow_upper)
+    get_shapes(img, img_contour, "red")
+
+    img = color_space(frame, blue_lower, blue_upper)
+    get_shapes(img, img_contour, "blue")
+
+    # img_stack = stackImages(0.8, ([frame, img, img_contour]))
+    # cv.imshow("Result", img_stack) 
+
+    res = encode_img(img_contour)
     return res
