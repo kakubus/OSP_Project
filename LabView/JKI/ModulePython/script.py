@@ -23,8 +23,5 @@ def process_image(raw_img):
     img = color_space(frame, blue_lower, blue_upper)
     get_shapes(img, img_contour, "blue")
 
-    # img_stack = stackImages(0.8, ([frame, img, img_contour]))
-    # cv.imshow("Result", img_stack) 
-
     res = encode_img(img_contour)
     return res
