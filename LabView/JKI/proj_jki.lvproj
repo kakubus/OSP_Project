@@ -10,7 +10,9 @@
 		<Property Name="server.vi.callsEnabled" Type="Bool">true</Property>
 		<Property Name="server.vi.propertiesEnabled" Type="Bool">true</Property>
 		<Property Name="specify.custom.address" Type="Bool">false</Property>
-		<Item Name="Documentation" Type="Folder"/>
+		<Item Name="Documentation" Type="Folder" URL="../Documentation">
+			<Property Name="NI.DISK" Type="Bool">true</Property>
+		</Item>
 		<Item Name="Default.png" Type="Document" URL="../Default.png"/>
 		<Item Name="liveView.ctl" Type="VI" URL="../liveView.ctl"/>
 		<Item Name="Main.vi" Type="VI" URL="../Main.vi"/>
