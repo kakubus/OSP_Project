@@ -13,7 +13,9 @@
 		<Item Name="Documentation" Type="Folder" URL="../Documentation">
 			<Property Name="NI.DISK" Type="Bool">true</Property>
 		</Item>
-		<Item Name="Default.png" Type="Document" URL="../Default.png"/>
+		<Item Name="ModulePython" Type="Folder" URL="../ModulePython">
+			<Property Name="NI.DISK" Type="Bool">true</Property>
+		</Item>
 		<Item Name="liveView.ctl" Type="VI" URL="../liveView.ctl"/>
 		<Item Name="Main.vi" Type="VI" URL="../Main.vi"/>
 		<Item Name="Dependencies" Type="Dependencies">
